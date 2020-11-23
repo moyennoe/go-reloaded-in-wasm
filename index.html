@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Call Go</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+        $("#Atoi").on('click', function() {
+          $.ajax({	  
+            url: "http://localhost:9000/Atoi",
+            method: "GET",
+			data:{machaine:$("#atoi").val(),mode:"Atoi"}, 
+            success: function(data) {
+              $("#Reponce1").html(data);
+			  
+            		},
+					});
+				});
+			});
+			$(document).ready(function() {
+        $("#RecursivePower").on('click', function() {
+          $.ajax({	  
+            url: "http://localhost:9000/RecursivePower",
+            method: "GET",
+			data:{machaine1:$("#nb").val(),mode:"nb", machaine2:$("#power").val(),mode:"power"},
+            success: function(data) {
+              $("#Reponce2").html(data);
+			
+					},
+					});
+				});
+			});
+			
+			$(document).ready(function() {
+        $("#PrintCombN").on('click', function() {
+          $.ajax({	  
+            url: "http://localhost:9000/PrintCombN",
+            method: "GET",
+			data:{machaine:$("#super").val(),mode:"printcombn"}, 
+            success: function(data) {
+              $("#Reponce3").html(data);
+			  
+            		},
+					});
+				});
+			});
+			$(document).ready(function() {
+        $("#PrintNbrBase").on('click', function() {
+          $.ajax({	  
+            url: "http://localhost:9000/PrintNbrBase",
+            method: "GET",
+			data:{machaine1:$("#base").val(),mode:"base", machaine2:$("#nbr").val(),mode:"nbr"},
+            success: function(data) {
+              $("#Reponce4").html(data);
+			
+					},
+					});
+				});
+			});
+			$(document).ready(function() {
+        $("#Doop").on('click', function() {
+          $.ajax({	  
+            url: "http://localhost:9000/Doop",
+            method: "GET",
+			data:{machaine1:$("#arg0").val(),mode:"arg0", machaine2:$("#arg1").val(),mode:"arg1", machaine3:$("#arg2").val(),mode:"arg2"},
+            success: function(data) {
+              $("#Reponce5").html(data);
+			
+					},
+					});
+				});
+			});
+			
+			$(document).ready(function() {
+        $("#AtoiBase").on('click', function() {
+          $.ajax({	  
+            url: "http://localhost:9000/AtoiBase",
+            method: "GET",
+			data:{machaine1:$("#base1").val(),mode:"base", machaine2:$("#nbr1").val(),mode:"nbr"},
+            success: function(data) {
+              $("#Reponce6").html(data);
+			
+					},
+					});
+				});
+			});
+			$(document).ready(function() {
+        $("#SplitWhiteSpaces").on('click', function() {
+          $.ajax({	  
+            url: "http://localhost:9000/SplitWhiteSpaces",
+            method: "GET",
+			data:{machaine:$("#split").val(),mode:"split"},
+            success: function(data) {
+              $("#Reponce7").html(data);
+			
+					},
+					});
+				});
+			});
+			$(document).ready(function() {
+        $("#Split").on('click', function() {
+          $.ajax({	  
+            url: "http://localhost:9000/Split",
+            method: "GET",
+			data:{machaine1:$("#Ok").val(),mode:"Ok",machaine2:$("#No").val(),mode:"No"},
+            success: function(data) {
+              $("#Reponce8").html(data);
+			
+					},
+					});
+				});
+			});
+			$(document).ready(function() {
+        $("#ConvertBase").on('click', function() {
+          $.ajax({	  
+            url: "http://localhost:9000/ConvertBase",
+            method: "GET",
+			data:{machaine1:$("#str1").val(),mode:"str1",machaine2:$("#str2").val(),mode:"str2",machaine3:$("#str3").val(),mode:"str3"},
+            success: function(data) {
+              $("#Reponce9").html(data);
+			
+					},
+					});
+				});
+			});
+			
+
+
+
+
+
+
+			$(document).ready(function() {
+        $("#ActiveBits").on('click', function() {
+          $.ajax({	  
+            url: "http://localhost:9000/ActiveBits",
+            method: "GET",
+			data:{machaine:$("#bits").val(),mode:"activebits"}, 
+            success: function(data) {
+              $("#Reponce13").html(data);
+			  
+            		},
+					});
+				});
+			});
+	  </script>
+	</head>
+	<body>
+		ex1: Atoi
+		<input TYPE="text" name="atoi" id="atoi" value = "0000000012345"> 
+		<button id="Atoi" type="submit">Atoi</button>
+		<div id="Reponce1"></div>
+		<br>
+		ex2: RecursivePower
+		<input TYPE="number" name="nb" id="nb" value = "3"> 
+		<input TYPE="number" name="power" id="power"value = "4"> 
+		<button id="RecursivePower" type="submit">RecursivePower</button>
+		<div id="Reponce2"></div>
+		<br>
+		ex3: PrintCombN
+		<input TYPE="number" name="super" id="super"value = "3"> 
+		<button id="PrintCombN" type="submit">PrintCombN</button>
+		<div id="Reponce3"></div>
+		<br>
+		ex4: PrintNbrBase
+		<input TYPE="number" name="base" id="base"value = "-125"> 
+		<input TYPE="text" name="nbr" id="nbr"value = "01"> 
+		<button id="PrintNbrBase" type="submit">PrintNbrBase</button>
+		<div id="Reponce4"></div>
+		<br>
+		ex5: Doop
+		<input TYPE="number" name="arg0" id="arg0"value = "3"> 
+		<input TYPE="text" name="arg1" id="arg1"value = "*"> 
+		<input TYPE="number" name="arg2" id="arg2"value = "4"> 
+		<button id="Doop" type="submit">Doop</button>
+		<div id="Reponce5"></div>
+		<br>
+
+		ex6: AtoiBase  
+		<input TYPE="text" name="base1" id="base1"value = "7D"> 
+		<input TYPE="text" name="nbr1" id="nbr1"value = "0123456789ABCDEF"> 
+		<button id="AtoiBase" type="submit">AtoiBase</button>
+		<div id="Reponce6"></div>
+		<br>
+
+		ex7: SplitWhiteSpaces  
+		<input TYPE="text" name="split" id="split"value = "Bonjour comment vas-tu?"> 
+		<button id="SplitWhiteSpaces" type="submit">SplitWhiteSpaces</button>
+		<div id="Reponce7"></div>
+		<br>
+
+		ex8: Split
+		<input TYPE="text" name="Ok" id="Ok"value = "HelloHAhowHAareHAyou?"> 
+		<input TYPE="text" name="No" id="No"value = "HA">
+		<button id="Split" type="submit">Split</button>
+		<div id="Reponce8"></div>
+		<br>
+		ex9: ConvertBase
+		<input TYPE="text" name="str1" id="str1"value= "101011"> 
+		<input TYPE="text" name="str2" id="str2"value= "01">
+		<input TYPE="text" name="str3" id="str3"value= "0123456789">
+		<button id="ConvertBase" type="submit">ConvertBase</button>
+		<div id="Reponce9"></div>
+		<br>
+
+
+
+
+
+
+
+
+		ex13: ActiveBits
+		<input TYPE="number" name="bits" id="bits"value= "19"> 
+		<button id="ActiveBits" type="submit">Activebits</button>
+		<div id="Reponce13"></div>
+		<br>
+
+</body>
+</html>
